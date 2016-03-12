@@ -1,4 +1,4 @@
 class Project < ActiveRecord::Base
-    hsa_many :tickets
+    has_many :tickets
     validates :name, presence: true
 end

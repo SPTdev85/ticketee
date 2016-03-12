@@ -1,0 +1,20 @@
+<header>
+<h1>Tickets</h1>
+
+    <ul class="actions">
+        <li><%= link_to "New Ticket", new_project_ticket_path(@project),
+            class: "new" %></li>
+    </ul>
+</header>
+
+<div id="ticket">
+    <header>
+        <h1><%= @project.name %></h1>
+    </header>
+    
+    <header>
+        <h2><%= @ticket.name %></h2>
+    </header>
+    
+    <%= simple_format(@ticket.description) %>
+</div>
