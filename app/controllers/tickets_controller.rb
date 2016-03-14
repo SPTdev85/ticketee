@@ -18,21 +18,21 @@ class TicketsController < ApplicationController
         end
     end
     
+     def set_ticket
+        @ticket = @project.tickets.find(params[:id])
+     end
+    
     def show
     end    
         
     private
     
-    def ticket_params
-        params.require(:ticket).permit(:name, :description)
-    end
-    
     def set_project
         @project = Project.find(params[:project_id])
     end
     
-    def set_ticket
-        @ticket = @project.tickets.find(params[:id])
+    def ticket_params
+        params.require(:ticket).permit(:name, :description)
     end
 
 end
